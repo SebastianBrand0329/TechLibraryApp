@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techlibraryapp/screen/login_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -7,17 +8,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
     return MaterialApp(
-      title: 'Material App',
+      title: 'TechLibraryApp ',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      // ignore: prefer_const_constructors
+      home: LoginScreen(),
     );
   }
 }
