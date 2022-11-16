@@ -6,6 +6,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:techlibraryapp/helpers/constans.dart';
+import 'package:techlibraryapp/models/token.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -185,6 +186,17 @@ class _LoginScreenState extends State<LoginScreen> {
       body: jsonEncode(request),
     );
     print(response.body);
+    // if (response.statusCode >= 400) {
+    //   setState(() {
+    //     _passwordShowError = true;
+    //     _passwordError = 'Email o contraseña incorrectos';
+    //   });
+    //   return;
+    // }
+    // var body = response.body;
+    // var decodeJson = jsonDecode(body);
+    // var token = Token.fromJson(decodeJson);
+    // print(token.token);
   }
 
   bool _validateField() {
